@@ -36,14 +36,6 @@ class UserController {
   async update(req, res) {
     res.send('Olá');
   }
-
-  async delete(req, res) {
-    try {
-
-    } catch (err) {
-
-    }
-  }
 }
 
 export default new UserController();

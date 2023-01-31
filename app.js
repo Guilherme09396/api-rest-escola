@@ -1,8 +1,8 @@
 import express from 'express';
 import './src/database/index';
-import { resolve } from 'path';
 
 import userRoutes from './src/routes/userRoutes';
+import tokenRoutes from './src/routes/tokenRoutes';
 
 class App {
   constructor() {
@@ -18,6 +18,7 @@ class App {
 
   routes() {
     this.app.use('/user', userRoutes);
+    this.app.use('/token', tokenRoutes);
   }
 }
 

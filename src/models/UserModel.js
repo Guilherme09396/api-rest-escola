@@ -53,4 +53,11 @@ export default class User extends Model {
 
     return this;
   }
+
+  async passwordIsValid(password) {
+    if (!(await bcrypt.compare(password, this.password_hash))) {
+      return false;
+    }
+    return true;
+  }
 }
