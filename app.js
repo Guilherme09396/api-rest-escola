@@ -3,6 +3,7 @@ import './src/database/index';
 
 import userRoutes from './src/routes/userRoutes';
 import tokenRoutes from './src/routes/tokenRoutes';
+import alunoRoutes from './src/routes/alunoRoutes';
 
 class App {
   constructor() {
@@ -19,6 +20,7 @@ class App {
   routes() {
     this.app.use('/user', userRoutes);
     this.app.use('/token', tokenRoutes);
+    this.app.use('/aluno', alunoRoutes);
   }
 }
 

@@ -18,7 +18,7 @@ export default (req, res, next) => {
     req.userEmail = dados.email;
     return next();
   } catch (err) {
-    return res.json({
+    return res.status(401).json({
       errors: ['Token inválido ou expirado'],
     });
   }
